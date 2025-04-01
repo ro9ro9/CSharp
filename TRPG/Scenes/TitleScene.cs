@@ -26,7 +26,7 @@ namespace TRPG.Scenes
 
         }
 
-        public override void SelectChoice()
+        public override void Choice()
         {
             Console.WriteLine("1. 게임시작");
             Console.WriteLine("2. 불러오기");

@@ -12,7 +12,7 @@ namespace TRPG.Scenes
 
         public abstract void Render();
 
-        public abstract void SelectChoice();
+        public abstract void Choice();
 
         public abstract void Result();
 

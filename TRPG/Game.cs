@@ -18,6 +18,7 @@ namespace TRPG
         {
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
+            sceneDic.Add("town", new townScene());
 
             curScene = sceneDic["Title"];
         }
@@ -31,13 +32,19 @@ namespace TRPG
         {
             while (gameOver == false)
             {
+                Console.Clear();
+
                 curScene.Render();
-                curScene.SelectChoice();
+                curScene.Choice();
                 curScene.Input();
                 curScene.Result();
                 curScene.Wait();
                 curScene.Next();
             }
+        }
+        public static void LoadScene(string sceneName)
+        {
+            curScene = sceneDic[sceneName];
         }
     }
 }
