@@ -8,10 +8,6 @@ namespace TRPG.Scenes
 {
     public class TitleScene : Scene
     {
-        public override void Next()
-        {
-
-        }
 
         public override void Render()
         {
@@ -36,6 +32,15 @@ namespace TRPG.Scenes
         public override void Wait()
         {
 
+        }
+        public override void Next()
+        {
+            switch (input)
+            {
+                case ConsoleKey.D1:
+                    Game.LoadScene("town");
+                    break;
+            }
         }
     }
 }

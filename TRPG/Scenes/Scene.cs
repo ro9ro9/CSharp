@@ -14,9 +14,9 @@ namespace TRPG.Scenes
 
         public abstract void Choice();
 
-        public abstract void Result();
-
         public abstract void Wait();
+
+        public abstract void Result();
 
         public abstract void Next();
 

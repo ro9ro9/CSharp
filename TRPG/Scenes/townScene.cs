@@ -17,7 +17,7 @@
             Console.WriteLine("1. 식수를 구한다.");
             Console.WriteLine("2. 식량을 구한다.");
             Console.WriteLine("3. 땔감을 구한다.");
-            Console.WriteLine("4. 운에 맡긴다.");
+            Console.WriteLine("4. 어슬렁거린다.");
         }
 
         public override void Wait()
@@ -30,6 +30,7 @@
             switch (input)
             {
                 case ConsoleKey.D1:
+                    
                     Console.WriteLine("식수를 구하러 갑니다.");
                     break;
                 case ConsoleKey.D2:
@@ -48,7 +49,12 @@
         }
         public override void Next()
         {
-            throw new NotImplementedException();
+            switch (input)
+            {
+                case ConsoleKey.D1:
+                    Game.LoadScene("water");
+                    break;
+            }
         }
     }
 }

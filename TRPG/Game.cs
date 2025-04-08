@@ -19,6 +19,7 @@ namespace TRPG
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
             sceneDic.Add("town", new townScene());
+            sceneDic.Add("water", new waterScene());
 
             curScene = sceneDic["Title"];
         }
@@ -33,11 +34,13 @@ namespace TRPG
             while (gameOver == false)
             {
                 Console.Clear();
-
                 curScene.Render();
+                Console.WriteLine();
                 curScene.Choice();
                 curScene.Input();
+                Console.WriteLine();
                 curScene.Result();
+                Console.WriteLine();
                 curScene.Wait();
                 curScene.Next();
             }
